@@ -2,14 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../material/material.module';
 import { BluejayComponent } from './bluejay.component';
-import { RouterModule } from '@angular/router';
+import { BluejayRoutingModule } from './bluejay-routing.module';
 
 @NgModule({
-  declarations: [],
+  declarations: [BluejayComponent],
   imports: [
     CommonModule,
-    RouterModule,
-    MaterialModule,
+    BluejayRoutingModule,
+    MaterialModule
+  ],
+  exports: [
     BluejayComponent
   ]
 })
