@@ -8,6 +8,9 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   bluejayImage = 'assets/icons/BlueJayOnly.png';
+  jackdawImage = 'assets/icons/JackdawOnly.png';
+  magpieImage = 'assets/icons/MagpieOnly.png';
+  
   constructor(private router: Router) {
   }
 

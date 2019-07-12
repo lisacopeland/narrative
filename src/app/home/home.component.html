@@ -15,20 +15,26 @@
     </div>
 
     <div fxLayoutAlign="space-between" fxLayout.gt-sm="row" fxLayout.lt-md="column">
-      <mat-card fxLayout="column" fxLayoutAlign="space-between" class="bb-card" ngClass.gt-sm="bb-card-30" ngClass.lt-md="bb-card-100">
+      <mat-card fxLayout="column" class="bb-card" ngClass.gt-sm="bb-card-30" ngClass.lt-md="bb-card-100">
         <div fxLayout="row" (click)="onBluejay()" fxLayoutAlign="center center">
           <img [src]="bluejayImage" class="bb-nav-avatar" alt="profile image">
-          <div class="mat-h1">Blue Jay</div>
+          <div class="mat-h1">BLUE JAY</div>
         </div>
         <div>This is all about bluejay</div>
         <div></div>
       </mat-card>
       <mat-card fxLayout="column" class="bb-card" ngClass.gt-sm="bb-card-30" ngClass.lt-md="bb-card-100">
-        <div class="mat-h3">Jackdaw</div>
+        <div fxLayout="row" (click)="onJackdaw()" fxLayoutAlign="center center">
+          <img [src]="jackdawImage" class="bb-nav-avatar" alt="profile image">
+          <div class="mat-h1">JACKDAW</div>
+        </div>
         <div>Jackdaw Content here</div>
       </mat-card>
       <mat-card fxLayout="column" class="bb-card" ngClass.gt-sm="bb-card-30" ngClass.lt-md="bb-card-100">
-        <div class="mat-h3">Magpie</div>
+        <div fxLayout="row" (click)="onMagpie()" fxLayoutAlign="center center">
+          <img [src]="magpieImage" class="bb-nav-avatar" alt="profile image">
+          <div class="mat-h1">MAGPIE</div>
+        </div>
         <div>Magpie Content here</div>
       </mat-card>
     </div>
