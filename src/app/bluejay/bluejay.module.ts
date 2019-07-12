@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../material/material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { BluejayComponent } from './bluejay.component';
 import { BluejayRoutingModule } from './bluejay-routing.module';
 
@@ -8,6 +9,7 @@ import { BluejayRoutingModule } from './bluejay-routing.module';
   declarations: [BluejayComponent],
   imports: [
     CommonModule,
+    FlexLayoutModule,
     BluejayRoutingModule,
     MaterialModule
   ],

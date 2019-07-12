@@ -1,0 +1,469 @@
+@import '../media-query/media-query';
+
+/* @media (min-width: #{$screen-xs-min}) {
+  color: black;
+  height: 400px;
+  width: 300px;
+ }
+
+@media (min-width: #{$screen-sm-min}) {
+  color: purple;
+  height: 500px;
+  width: 400px;
+ }
+
+@media (min-width: #{$screen-md-min}) {
+  color: red;
+  height: 575px;
+  width: 550px;
+}
+
+@media (min-width: #{$screen-lg-min}) {
+  color: green;
+  height: 575px;
+  width: 700px;
+}
+
+@media (min-width: #{$screen-xl-min}) {
+  color: blue;
+  height: 650px;
+  width: 750px;
+}
+ */
+
+.costmodel-edit-dialog .mat-dialog-container {
+  @media (min-width: #{$screen-xs-min}) {
+    height: 350px;
+    width: 300px;
+  }
+
+  @media (min-width: #{$screen-sm-min}) {
+    height: 400px;
+    width: 400px;
+  }
+
+  @media (min-width: #{$screen-md-min}) {
+    height: 400px;
+    width: 500px;
+  }
+
+  @media (min-width: #{$screen-lg-min}) {
+    height: 400px;
+    width: 500px;
+  }
+
+  @media (min-width: #{$screen-xl-min}) {
+    height: 400px;
+    width: 500px;
+  }
+
+}
+
+.invite-contacts-dialog .mat-dialog-container {
+  @media (min-width: #{$screen-xs-min}) {
+    height: 300px;
+    width: 400px;
+  }
+
+  @media (min-width: #{$screen-sm-min}) {
+    height: 400px;
+    width: 500px;
+  }
+
+  @media (min-width: #{$screen-md-min}) {
+    height: 300px;
+    width: 500px;
+  }
+
+  @media (min-width: #{$screen-lg-min}) {
+    height: 300px;
+    width: 500px;
+  }
+
+  @media (min-width: #{$screen-xl-min}) {
+    height: 300px;
+    width: 500px;
+  }
+}
+
+.location-contacts-dialog .mat-dialog-container {
+  @media (min-width: #{$screen-xs-min}) {
+    height: 375px;
+    width: 450px;
+  }
+
+  @media (min-width: #{$screen-sm-min}) {
+    height: 375px;
+    width: 500px;
+  }
+
+  @media (min-width: #{$screen-md-min}) {
+    height: 400px;
+    width: 650px;
+  }
+
+  @media (min-width: #{$screen-lg-min}) {
+    height: 525px;
+    width: 750px;
+  }
+
+  @media (min-width: #{$screen-xl-min}) {
+    height: 525px;
+    width: 750px;
+  }
+}
+
+.location-edit-dialog .mat-dialog-container {
+  @media (min-width: #{$screen-xs-min}) {
+    height: 400px;
+    width: 300px;
+  }
+
+  @media (min-width: #{$screen-sm-min}) {
+    height: 500px;
+    width: 400px;
+  }
+
+  @media (min-width: #{$screen-md-min}) {
+    height: 575px;
+    width: 550px;
+  }
+
+  @media (min-width: #{$screen-lg-min}) {
+    height: 575px;
+    width: 700px;
+  }
+
+  @media (min-width: #{$screen-xl-min}) {
+    height: 650px;
+    width: 750px;
+  }
+}
+
+.order-detail-dialog .mat-dialog-container {
+
+  @media (min-width: #{$screen-xs-min}) {
+    height: 400px;
+    width: 300px;
+  }
+
+  @media (min-width: #{$screen-sm-min}) {
+    height: 400px;
+    width: 400px;
+  }
+
+  @media (min-width: #{$screen-md-min}) {
+    height: 400px;
+    width: 600px;
+  }
+
+  @media (min-width: #{$screen-lg-min}) {
+    height: 400px;
+    width: 700px;
+  }
+
+  @media (min-width: #{$screen-xl-min}) {
+    height: 400px;
+    width: 700px;
+  }
+}
+
+.order-edit-dialog .mat-dialog-container {
+
+  @media (min-width: #{$screen-xs-min}) {
+    height: 400px;
+    width: 300px;
+  }
+
+  @media (min-width: #{$screen-sm-min}) {
+    height: 500px;
+    width: 400px;
+  }
+
+  @media (min-width: #{$screen-md-min}) {
+    height: 550px;
+    width: 700px;
+  }
+
+  @media (min-width: #{$screen-lg-min}) {
+    height: 600px;
+    width: 750px;
+  }
+
+  @media (min-width: #{$screen-xl-min}) {
+    height: 650px;
+    width: 750px;
+  }
+}
+
+.order-exceptions-dialog .mat-dialog-container {
+  @media (min-width: #{$screen-xs-min}) {
+    height: 400px;
+    width: 300px;
+  }
+
+  @media (min-width: #{$screen-sm-min}) {
+    height: 450px;
+    width: 400px;
+  }
+
+  @media (min-width: #{$screen-md-min}) {
+    height: 450px;
+    width: 550px;
+  }
+
+  @media (min-width: #{$screen-lg-min}) {
+    height: 450px;
+    width: 650px;
+  }
+
+  @media (min-width: #{$screen-xl-min}) {
+    height: 450px;
+    width: 650px;
+  }
+}
+
+.orderschedule-edit-dialog.mat-dialog-container {
+  @media (min-width: #{$screen-xs-min}) {
+    height: 400px;
+    width: 300px;
+  }
+
+  @media (min-width: #{$screen-sm-min}) {
+    height: 500px;
+    width: 400px;
+  }
+
+  @media (min-width: #{$screen-md-min}) {
+    height: 635px;
+    width: 700px;
+  }
+
+  @media (min-width: #{$screen-lg-min}) {
+    height: 725px;
+    width: 750px;
+  }
+
+  @media (min-width: #{$screen-xl-min}) {
+    height: 675px;
+    width: 750px;
+  }
+}
+
+.org-edit-dialog .mat-dialog-container {
+  @media (min-width: #{$screen-xs-min}) {
+    height: 400px;
+    width: 300px;
+  }
+
+  @media (min-width: #{$screen-sm-min}) {
+    height: 500px;
+    width: 400px;
+  }
+
+  @media (min-width: #{$screen-md-min}) {
+    height: 575px;
+    width: 550px;
+  }
+
+  @media (min-width: #{$screen-lg-min}) {
+    height: 725px;
+    width: 750px;
+  }
+
+  @media (min-width: #{$screen-xl-min}) {
+    height: 800px;
+    width: 750px;
+  }
+}
+
+.org-services-dialog .mat-dialog-container {
+  @media (min-width: #{$screen-xs-min}) {
+    height: 300px;
+    width: 400px;
+  }
+
+  @media (min-width: #{$screen-sm-min}) {
+    height: 400px;
+    width: 500px;
+  }
+
+  @media (min-width: #{$screen-md-min}) {
+    height: 450px;
+    width: 725px;
+  }
+
+  @media (min-width: #{$screen-lg-min}) {
+    height: 450px;
+    width: 750px;
+  }
+
+  @media (min-width: #{$screen-xl-min}) {
+    height: 450px;
+    width: 750px;
+  }
+}
+
+.org-taxrates-dialog .mat-dialog-container {
+  @media (min-width: #{$screen-xs-min}) {
+    height: 300px;
+    width: 400px;
+  }
+
+  @media (min-width: #{$screen-sm-min}) {
+    height: 400px;
+    width: 500px;
+  }
+
+  @media (min-width: #{$screen-md-min}) {
+    height: 300px;
+    width: 725px;
+  }
+
+  @media (min-width: #{$screen-lg-min}) {
+    height: 300px;
+    width: 750px;
+  }
+
+  @media (min-width: #{$screen-xl-min}) {
+    height: 300px;
+    width: 750px;
+  }
+}
+
+.project-edit-dialog .mat-dialog-container {
+  @media (min-width: #{$screen-xs-min}) {
+    height: 450px;
+    width: 300px;
+  }
+
+  @media (min-width: #{$screen-sm-min}) {
+    height: 450px;
+    width: 400px;
+  }
+
+  @media (min-width: #{$screen-md-min}) {
+    height: 450px;
+    width: 550px;
+  }
+
+  @media (min-width: #{$screen-lg-min}) {
+    height: 600px;
+    width: 700px;
+  }
+
+  @media (min-width: #{$screen-xl-min}) {
+    height: 600px;
+    width: 700px;
+  }
+}
+
+.quick-order-dialog .mat-dialog-container {
+  @media (min-width: #{$screen-xs-min}) {
+    height: 400px;
+    width: 300px;
+  }
+
+  @media (min-width: #{$screen-sm-min}) {
+    height: 450px;
+    width: 400px;
+  }
+
+  @media (min-width: #{$screen-md-min}) {
+    height: 525px;
+    width: 600px;
+  }
+
+  @media (min-width: #{$screen-lg-min}) {
+    height: 550px;
+    width: 700px;
+  }
+
+  @media (min-width: #{$screen-xl-min}) {
+    height: 550px;
+    width: 700px;
+  }
+}
+
+.staff-edit-dialog .mat-dialog-container {
+  @media (min-width: #{$screen-xs-min}) {
+    height: 400px;
+    width: 350px;
+  }
+
+  @media (min-width: #{$screen-sm-min}) {
+    height: 500px;
+    width: 450px;
+  }
+
+  @media (min-width: #{$screen-md-min}) {
+    height: 575px;
+    width: 575px;
+  }
+
+  @media (min-width: #{$screen-lg-min}) {
+    height: 725px;
+    width: 750px;
+  }
+
+  @media (min-width: #{$screen-xl-min}) {
+    height: 800px;
+    width: 750px;
+  }
+}
+
+.timelog-edit-dialog .mat-dialog-container {
+
+  @media (min-width: #{$screen-xs-min}) {
+    height: 350px;
+    width: 300px;
+  }
+
+  @media (min-width: #{$screen-sm-min}) {
+    height: 350px;
+    width: 400px;
+  }
+
+  @media (min-width: #{$screen-md-min}) {
+    height: 350px;
+    width: 450px;
+  }
+
+  @media (min-width: #{$screen-lg-min}) {
+    height: 350px;
+    width: 450px;
+  }
+
+  @media (min-width: #{$screen-xl-min}) {
+    height: 350px;
+    width: 450px;
+  }
+}
+
+.workload-edit-dialog .mat-dialog-container {
+
+  @media (min-width: #{$screen-xs-min}) {
+    height: 400px;
+    width: 300px;
+  }
+
+  @media (min-width: #{$screen-sm-min}) {
+    height: 500px;
+    width: 400px;
+  }
+
+  @media (min-width: #{$screen-md-min}) {
+    height: 550px;
+    width: 600px;
+  }
+
+  @media (min-width: #{$screen-lg-min}) {
+    height: 550px;
+    width: 700px;
+  }
+
+  @media (min-width: #{$screen-xl-min}) {
+    height: 550px;
+    width: 700px;
+  }
+}

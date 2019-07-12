@@ -1,0 +1,126 @@
+@import '../colors/colors';
+
+.mat-drawer-container {
+  background: $grey-lighten;
+}
+
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+
+}
+
+.bb-notification-list {
+  mat-menu-panel {
+    max-width: 100% !important;
+  }
+
+}
+
+.servicekicker-layout-logo {
+  margin-top: 10px;
+  height: auto;
+  max-height: 60px;
+  max-width: 80px;
+}
+
+
+.bb-aside-profile-toolbar {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+.bb-aside-support-menu {
+  vertical-align: bottom;
+}
+
+
+// Aside Search
+bb-search-bar.search-container-aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 150px;
+  height: 100%;
+  border: none;
+
+  mat-toolbar-wrapper {
+    border: none;
+  }
+
+  .mat-form-field-appearance-standard .mat-form-field-underline {
+    height: 1px;
+    display: none;
+
+    mat-form-field-ripple {
+      display: none;
+    }
+  }
+
+  .mat-form-field-appearance-legacy .mat-form-field-underline {
+    height: 0;
+    display: none;
+
+    mat-form-field-ripple {
+      display: none;
+    }
+  }
+
+  input {
+    color: $grey-dark;
+    border-radius: 100px;
+    background-color: $white;
+    padding: 5px 16px;
+    width: 120px;
+    max-width: 120px;
+    height: 50%;
+    -webkit-appearance: none;
+    width: 60%;
+    transition-delay: 0.3s;
+    transition: width 0.6s ease-in-out;
+
+    &:focus {
+      outline: none;
+      width: 100%;
+    }
+
+
+    @media (max-width: 480px) {
+      width: 150px;
+    }
+  }
+}
+
+
+.bb-active {
+  font-weight: 600;
+  background: darken($grey-lighten, 5%);
+}
+
+
+.bb-mat-list-expand {
+  flex-direction: row;
+  box-sizing: border-box;
+  display: flex;
+  place-content: center space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.bb-nav-submenu {
+  span {
+    padding-left: 28px;
+    font-size: 1em;
+    font-weight: 300;
+  }
+}

@@ -1,18 +1,24 @@
-<div>this is above the column</div>
-<div fxLayout="column">
-  <div>This is the top</div>
-  <mat-card>
-    <div>Content here</div>
-  </mat-card>
-  <div fxLayout="row" fxLayoutAlign="space-between center">
-  <mat-card>
-    <div>Bluejay summary content here</div>
-  </mat-card>
-  <mat-card>
-    <div>Jackdaw summary content here</div>
-  </mat-card>
-  <mat-card>
-    <div>Magpie summary content here</div>
-  </mat-card>
+<section class="bb-overview-container">
+
+  <mat-toolbar>
+    <h1 class="mat-h1">Corvidi</h1>
+  </mat-toolbar>
+
+  <div fxLayout="column" fxLayoutGap="10px">
+      <mat-card class="bb-card bb-card-100">
+        <div>Hero Banner Content here</div>
+      </mat-card>
+
+    <div fxLayoutGap="10px" fxLayout.gt-sm="row" fxLayout.lt-md="column">
+      <mat-card class="bb-card" ngClass.gt-sm="bb-card-33" ngClass.lt-md="bb-card-100">
+        <div>Blue Jay Content here</div>
+      </mat-card>
+      <mat-card class="bb-card" ngClass.gt-sm="bb-card-33" ngClass.lt-md="bb-card-100">
+        <div>Jackdaw Content here</div>
+      </mat-card>
+      <mat-card class="bb-card" ngClass.gt-sm="bb-card-33" ngClass.lt-md="bb-card-100">
+        <div>Magpie Content here</div>
+      </mat-card>
+    </div>
   </div>
-</div>
+</section>

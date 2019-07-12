@@ -1,0 +1,57 @@
+@import '../colors/colors';
+
+.bb-card {
+  transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
+  display: block;
+  position: relative;
+  height: 250px;
+  border-radius: 2px;
+  background: $white;
+}
+
+
+.bb-list-card {
+  height: 375px;
+}
+
+.bb-log-card {
+  overflow-y: scroll;
+}
+
+.bb-card-img {
+  max-height: 200px;
+}
+
+.bb-card-25 {
+  width: 25%;
+}
+
+.bb-card-33 {
+  width: 30%;
+}
+
+.bb-card-50 {
+  width: 50%;
+}
+
+.bb-card-75 {
+  width: 75%;
+}
+
+.bb-card-100 {
+  max-width: 100%;
+}
+
+.bb-placeholder-card {
+  border: none;
+  box-shadow: none !important;
+  color: transparent;
+  background-color: transparent;
+}
+
+
+.bb-card-header {
+  margin: 0;
+  padding-top: 5px;
+  border-bottom: 0.5px solid $grey;
+}

@@ -1,0 +1,43 @@
+@import '../colors/colors';
+
+.bb-dashboard-container {
+  margin: 20px;
+  min-height: 100vh;
+  max-width: 100vw;
+}
+
+
+.bb-dashboard-card-title{
+  padding-top: 20px;
+  font-size: 1.75em;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.bb-dashboard-card {
+  height: auto;
+  max-height: 100%;
+  width: 100%;
+  transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
+  border-radius: 2px;
+  background: $white;
+
+  .bb-dashboard-card-header {
+    padding: 5px 0 0 0;
+  }
+
+
+  .bb-dashboard-profile-image {
+
+  }
+}
+
+.bb-dashboard-more-button {
+  text-align: right;
+}
+
+.bb-dashboard-card-content {
+  text-align: center;
+}
+

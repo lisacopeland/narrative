@@ -1,0 +1,16 @@
+@import '../colors/colors';
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: $grey-lighten;
+  color: $grey-dark;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+a {
+  text-decoration: none !important;
+  color: $grey-dark;
+}

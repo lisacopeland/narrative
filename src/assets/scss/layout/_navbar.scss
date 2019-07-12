@@ -1,0 +1,84 @@
+@import '../colors/colors';
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.bb-nav-toolbar-fill {
+  flex: 1 1 auto;
+}
+
+
+
+
+// SEARCH BOX
+bb-search-bar.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 150px;
+  height: 100%;
+  border: none;
+
+  mat-toolbar-wrapper {
+    border: none;
+  }
+
+
+  .mat-form-field-appearance-standard .mat-form-field-underline {
+    height: 1px;
+    display: none;
+
+    mat-form-field-ripple {
+      display: none;
+    }
+  }
+
+
+  .mat-form-field-appearance-legacy .mat-form-field-underline {
+    height: 1px;
+    display: none;
+
+    mat-form-field-ripple {
+      display: none;
+    }
+  }
+
+  input {
+    color: $grey-dark;
+    border-radius: 100px;
+    background-color: $grey-lighten;
+    padding: 5px 16px;
+    width: 180px;
+    max-width: 340px;
+    height: 50%;
+    -webkit-appearance: none;
+    width: 50%;
+    transition: width 0.4s ease-in-out;
+
+    &:focus {
+      outline: none;
+      width: 100%;
+    }
+
+
+    @media (max-width: 480px) {
+      width: 150px;
+    }
+  }
+}
+
+.bb-nav-avatar{
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.bb-account-icon{
+  padding-left: 2px;
+  color: $primary-color;
+}

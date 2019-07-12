@@ -1,0 +1,96 @@
+@import '../colors/colors';
+
+.bb-detail-container {
+  margin: 20px;
+  min-height: 100vh;
+  max-width: 100vw;
+}
+
+
+.bb-detail-card {
+  background: $white;
+
+
+  .bb-detail-card-header {
+    padding: 5px 0 0 0;
+  }
+
+}
+
+
+.bb-detail-form-card {
+  height: 100%;
+  width: 95%;
+  padding: 5px;
+  background: $white;
+}
+
+
+.detail-subject {
+  color: $grey;
+  font-size: 1em;
+  width: 50px;
+  cursor: help;
+}
+
+
+.detail-value {
+  color: $grey-dark;
+  font-weight: 500;
+  font-size: 1em;
+  margin-left: 20px;
+  text-decoration: none;
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.detail-value-capitalize {
+  color: $grey-dark;
+  font-weight: 500;
+  font-size: 1em;
+  margin-left: 20px;
+  text-transform: capitalize;
+  text-decoration: none;
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.detail-value-lowercase {
+  color: $grey-dark;
+  font-weight: 500;
+  font-size: 1em;
+  margin-left: 20px;
+  text-transform: lowercase;
+  text-decoration: none;
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.detail-title-list {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail-title-list > .detail-title-list-icon {
+  font-size: 1.3em;
+  height: 83%;
+}
+
+.detail-filter-menu {
+  position: absolute !important;
+  top: 0;
+  margin: 0;
+  right: 70px;
+  padding-top: 5px;
+}

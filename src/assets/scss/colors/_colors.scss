@@ -1,0 +1,154 @@
+/** Colors **/
+$primary-color: #4c5f84;
+$accent-color: #f8c442;
+$grey-lighten: #f5f5f5;
+$grey: #929699;
+$grey-dark: #474c51;
+$green: #1ed75f;
+$white: #ffffff;
+
+
+$mat-skbluepalette: (
+  50 : #eaecf0,
+  100 : #c9cfda,
+  200 : #a6afc2,
+  300 : #828fa9,
+  400 : #677796,
+  500 : #4c5f84,
+  600 : #45577c,
+  700 : #3c4d71,
+  800 : #334367,
+  900 : #243254,
+  A100 : #99b6ff,
+  A200 : #6691ff,
+  A400 : #336dff,
+  A700 : #1a5aff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+$mat-skyellowpalette: (
+  50 : #fef8e8,
+  100 : #fdedc6,
+  200 : #fce2a1,
+  300 : #fad67b,
+  400 : #f9cd5e,
+  500 : #f8c442,
+  600 : #f7be3c,
+  700 : #f6b633,
+  800 : #f5af2b,
+  900 : #f3a21d,
+  A100 : #ffffff,
+  A200 : #fffbf5,
+  A400 : #ffe6c2,
+  A700 : #ffdca8,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$mat-skwhitepalette: (
+  50 : #fefefe,
+  100 : #fefefe,
+  200 : #fdfdfd,
+  300 : #fcfcfc,
+  400 : #fbfbfb,
+  500 : #fafafa,
+  600 : #f9f9f9,
+  700 : #f9f9f9,
+  800 : #f8f8f8,
+  900 : #f6f6f6,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #ffffff,
+  A700 : #ffffff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+
+/**
+ * Backgrounds
+ */
+
+.bg-grey-light {
+  background-color: $grey-lighten;
+}
+
+.bg-grey {
+  background-color: $grey;
+}
+
+.bg-primary-color {
+  background-color: $primary-color;
+}
+
+.bg-accent-color {
+  background-color: $accent-color;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+
+.font-grey-light {
+  color: $grey-lighten;
+}
+
+.font-grey {
+  color: $grey;
+}
+
+.font-primary {
+  color: $primary-color;
+}
+
+.font-accent {
+  color: $accent-color;
+}
+
+.font-white {
+  color: $white;
+}

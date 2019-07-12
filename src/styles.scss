@@ -1,2 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all');
+@import "assets/scss/custom_theme/blackbird.theme";
+
+// 3. Base stuff
+@import 'assets/scss/base/v1';
+@import 'assets/scss/colors/colors';
+
+// 4. Layout-related sections
+@import 'assets/scss/layout/v1';
+@import 'assets/scss/utils/utils';
+
+

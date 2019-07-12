@@ -1,0 +1,18 @@
+@import '../colors/colors';
+
+.bb-breadcrumb-container {
+  padding: 5px 10px;
+  background: $grey-lighten;
+
+  .bb-breadcrumb-links-row {
+    a {
+      color: $grey-dark;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  .bb-breadcrumb-action-row {
+
+  }
+}

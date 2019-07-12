@@ -1,0 +1,19 @@
+@import '../colors/colors';
+
+.bb-overview-container {
+  margin: 20px;
+  height: 100%;
+  max-width: 100%;
+
+  .bb-section-title {
+    font-weight: 600;
+    font-size: 1.04em;
+    margin: 5px 0px 5px 0px;
+  }
+
+  .bb-section-subtitle {
+    font-weight: 600;
+    font-size: 1.01em;
+    /* margin: 5px 0px 5px 0px; */
+  }
+}

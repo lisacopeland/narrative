@@ -1,0 +1,121 @@
+@import '../colors/colors';
+
+.bb-form {
+  .bb-form-sub-title {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 16px 0px 16px 0px;
+  }
+
+
+  .bb-title-label {
+    font-weight: bold;
+    padding-right: 10px;
+  }
+
+
+  .bb-section-title{
+      font-weight: 600;
+      font-size: 1.04em;
+      margin: 5px 0px 5px 0px;
+  }
+
+  .bb-hint-box {
+    font-size: 0.9em;
+    font-weight: lighter;
+    padding-right: 10px;
+    word-wrap: break-word;
+    width: 75%;
+  }
+
+  .input-100-field {
+    width: 100%;
+  }
+
+  .input-75-field {
+    width: 75%;
+  }
+
+  .input-60-field {
+    width: 60%;
+  }
+
+  .input-50-field {
+    width: 50%;
+  }
+
+  .input-30-field {
+    width: 30%;
+  }
+
+  .input-25-field {
+    width: 25%;
+  }
+
+  .input-15-field {
+    width: 15%;
+  }
+
+  .input-10-field {
+    width: 10%;
+  }
+
+  .time-picker-50 {
+    width: 50%;
+    height: 66px;
+    border: none;
+    outline: none;
+  }
+
+  .time-picker-75 {
+    width: 75%;
+    height: 66px;
+    border: none;
+    outline: none;
+  }
+
+  .time-picker-100 {
+    width: 75%;
+    height: 66px;
+    border: none;
+    outline: none;
+  }
+
+  .bb-form-profile-image-container {
+    margin-bottom: 10px;
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    max-width: 200px;
+    place-content: center center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+
+
+    .bb-form-profile-image-input {
+      display: none;
+    }
+
+
+    /* Make the image to responsive */
+    .bb-form-profile-image {
+      cursor: pointer;
+      vertical-align: middle;
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+    }
+
+    .bb-form-profile-image-disabled {
+      cursor: auto;
+    }
+
+
+    .bb-form-profile-button {
+      margin: 5px;
+      width: 100%;
+    }
+  }
+}
+
