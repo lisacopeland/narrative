@@ -16,7 +16,7 @@
 
     <div fxLayoutAlign="space-between" fxLayout.gt-sm="row" fxLayout.lt-md="column">
       <mat-card fxLayout="column" fxLayoutAlign="space-between" class="bb-card" ngClass.gt-sm="bb-card-30" ngClass.lt-md="bb-card-100">
-        <div fxLayout="row" fxLayoutAlign="center center">
+        <div fxLayout="row" (click)="onBluejay()" fxLayoutAlign="center center">
           <img [src]="bluejayImage" class="bb-nav-avatar" alt="profile image">
           <div class="mat-h1">Blue Jay</div>
         </div>

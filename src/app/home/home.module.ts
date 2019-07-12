@@ -4,7 +4,6 @@ import { MaterialModule } from '../material/material.module';
 import { HomeComponent } from './home.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HomeRoutingModule } from './home-routing.module';
-import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [HomeComponent],
