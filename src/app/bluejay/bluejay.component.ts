@@ -11,5 +11,6 @@ export class BluejayComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log('hi from bluejay');
   }
 }

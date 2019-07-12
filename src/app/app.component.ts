@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit {
   title = 'blackbird';
   opened = false;
+  headerImage = 'assets/icons/flying90.png';
 
   constructor(private router: Router) {
   }

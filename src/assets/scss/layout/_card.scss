@@ -4,11 +4,10 @@
   transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
   display: block;
   position: relative;
-  height: 250px;
+  height: 300px;
   border-radius: 2px;
   background: $white;
 }
-
 
 .bb-list-card {
   height: 375px;
@@ -26,8 +25,12 @@
   width: 25%;
 }
 
-.bb-card-33 {
+.bb-card-30 {
   width: 30%;
+}
+
+.bb-card-33 {
+  width: 33%;
 }
 
 .bb-card-50 {
@@ -39,7 +42,15 @@
 }
 
 .bb-card-100 {
-  max-width: 100%;
+  width: 100%;
+}
+
+.bb-card-90 {
+  width: 90%;
+}
+
+.bb-card-85 {
+  width: 85%;
 }
 
 .bb-placeholder-card {

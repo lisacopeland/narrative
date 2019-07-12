@@ -12,6 +12,14 @@ const routes: Routes = [
     path: 'bluejay',
     loadChildren: () => import('./bluejay/bluejay.module').then(m => m.BluejayModule)
   },
+  {
+    path: 'jackdaw',
+    loadChildren: () => import('./jackdaw/jackdaw.module').then(m => m.JackdawModule)
+  },
+  {
+    path: 'magpie',
+    loadChildren: () => import('./magpie/magpie.module').then(m => m.MagpieModule)
+  },
 ];
 
 @NgModule({
