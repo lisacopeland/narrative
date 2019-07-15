@@ -1,11 +1,10 @@
 @import '../colors/colors';
 
 .bb-card {
-  transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
   display: block;
   position: relative;
+  padding: 16px;
   height: 300px;
-  border-radius: 2px;
   background: $white;
 }
 
