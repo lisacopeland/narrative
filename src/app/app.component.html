@@ -10,11 +10,13 @@
   <mat-sidenav-content class="sidenav-content">
 
     <!-- Nav bar -->
-    <mat-toolbar fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" class="bg-white with-border">
-      <a fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" routerLink="/home">
+    <mat-toolbar fxLayout="row" fxLayoutAlign="start" fxLayoutGap="10px" class="bg-white with-border">
+      <a fxLayout="row" fxLayoutAlign="start" routerLink="/home">
         <img [src]="headerImage" class="bb-nav-avatar"
           alt="profile image">
-        <div>CORVIDI</div>
+      </a>
+      <a fxLayout="row" fxLayoutAlign="start center" routerLink="/home">
+        <p class="header-text">CORVIDI</p>
       </a>
     </mat-toolbar>
     <!-- End Navbar -->

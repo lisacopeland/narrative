@@ -10,4 +10,7 @@
 @import 'assets/scss/layout/v1';
 @import 'assets/scss/utils/utils';
 
-
+@font-face {
+  font-family: SitkaText;
+  src: url("assets/fonts/Fluent_SitkaSmall.ttf") format("truetype");
+}
