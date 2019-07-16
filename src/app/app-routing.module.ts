@@ -18,6 +18,10 @@ const routes: Routes = [
     path: 'magpie',
     loadChildren: () => import('./magpie/magpie.module').then(m => m.MagpieModule)
   },
+  {
+    path: 'raven',
+    loadChildren: () => import('./raven/raven.module').then(m => m.RavenModule)
+  },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', redirectTo: '/home', pathMatch: 'full' },
 ];
