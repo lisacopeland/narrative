@@ -10,6 +10,7 @@ export class HomeComponent implements OnInit {
   bluejayImage = 'assets/icons/BlueJayBox.png';
   jackdawImage = 'assets/icons/JackdawBox.png';
   magpieImage = 'assets/icons/MagpieBox.png';
+  ravenImage = 'assets/icons/RavenBox.png';
 
   constructor(private router: Router) {
   }
