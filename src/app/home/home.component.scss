@@ -6,9 +6,34 @@
   padding: 0px 0px 0px 0px;
 }
 
-.p-text {
+/*.p-text {
   font-family: SitkaText;
   letter-spacing: -3px;
   word-spacing: -6px;
   line-height: 25px;
+}*/
+
+.header-text {
+  font-family: SitkaText;
+  letter-spacing: -3px;
+  word-spacing: -6px;
+  line-height: 25px;
+  font-weight: bold;
+  /*border: 1px solid blue;*/
+}
+
+h1.title-text {
+  padding: 0px;
+}
+
+h4.header-text {
+  margin: 12px;
+}
+
+.card-test {
+  /*border: 1px solid red;*/
+}
+
+.testing {
+  /*border: 1px solid green;*/
 }

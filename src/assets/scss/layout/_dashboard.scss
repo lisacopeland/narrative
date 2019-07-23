@@ -18,19 +18,26 @@
 .bb-dashboard-card {
   height: auto;
   max-height: 100%;
-  width: 100%;
-  transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
-  border-radius: 2px;
-  background: $white;
+  width: 95%;
+  margin: 48px;
 
-  .bb-dashboard-card-header {
-    padding: 5px 0 0 0;
+  .bb-dashboard-card-header-2 {
+    text-align: center;
   }
 
-
-  .bb-dashboard-profile-image {
-
+  .bb-title-text {
+    text-align: center;
+    font-family: SitkaText;
+    letter-spacing: -4px;
+    margin: 24px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
   }
+  
+  .bb-dashboard-img {
+    vertical-align: middle;
+    width: 264px;
+    height: 125px;
+  }  
 }
 
 .bb-dashboard-more-button {

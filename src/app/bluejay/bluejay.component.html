@@ -1,5 +1,52 @@
-<section class="bb-overview-container">
-  <div class="bb-card">
-    <div>Bluejay Content here</div>
+<div class="bb-dashboard-card" fxLayout="column" fxLayoutAlign="start center" >
+  <img [src] = "bluejayImage" class="bb-dashboard-img">
+  <h2 class="mat-h2 bb-title-text">Global Service Orchestration</h2>
+  <div>
+    <p fxLayout="row wrap">
+      BLUE JAY is a proposed Open Source solution for Multi-Cluster management. It defines a flexible and powerful model for services
+        and clusters, providing additional management on top of existing infrastructure like Kubernetes.
+    </p>
+    <p>There are two general goals that are driving the design of BLUE JAY.</p>
+    <ul>
+        <li>Provide an infrastructure agnostic data model, <b>isolating both services and management tools from changes in the underlying management systems</b>. For example, if one changed from running services on Kubernetes to Kubernetes plus Istio, none of the service code, management UI or data model should need to change.</li>
+        <li>Existing Multi-Cluster managers do not maintain a holistic view across all managed clusters and are limited by their origins as Single-Cluster managers. BLUE JAY has visibility into all services running in the entire set of clusters, and is able to make decisions about which services should be located near each other, which services need to run hot to provide capacity for other services, which services should contribute to or take from a pool of reserved nodes, and so on. The goal is to <b>significantly drop costs by reducing the need to overprovision services</b>.</li>
+    </ul>
+    <p>In addition, there are several principles that help guide the design: </p>
+    <ul>
+        <li>First, we want to create a solution that will <b>complement existing Open Source technologies</b> like Kubernetes, Docker, Envoy, Istio, Consul and so on. BLUE JAY, if successful, would be Open Sourced and well regarded by the broader community of organizations working on container-based solutions.</li>
+        <li>Second, where possible we want to <b>leverage existing technology, focusing on proven industry standards</b>. We should not duplicate a design if there are no compelling reasons to avoid using an existing solution. In general, do not focus on the one percent edge cases, which so often lead us into deciding a custom solution is necessary.</li>
+        <li>Third, though getting costs down is important, BLUE JAY wants to <b>leverage key Microsoft infrastructure components</b> even if they are not currently the low-price approach. Over time, costs of services in Azure are expected to come down due to ongoing price pressure and we want to be able to take advantage of that drop.</li>
+    </ul>
+    
+    <h2 class="mat-h2 bb-dashboard-card-header-2">Unified Service Model</h2>
+    <p>
+        The abstract model which describes clusters, services and so on, is called the Unified Service Model. It is manipulated by an API &mdash; and a UI to sit on top
+          of the API &mdash; and is stored in a replicated, geo-distributed and highly available database. This abstract model works at a very high level. It does not 
+          necessarily say that a service should run on a particular cluster or tell us the IP address of a cluster&rsquo;s gateway. It says, &ldquo;there is a service A 
+          that should deploy version 2.1, and it should deploy in EastUS, and it is production, and it should be able to handle 2K rps, and its error rate should be less
+          than 0.01%, and it talks to service B a lot&rdquo;. 
+    </p> 
+    <p>
+        The Blue Jay Model Compiler looks at the desired state which has been called out in the model, then considers the actual state as reported via calls to the management
+        platform (e.g. Kubernetes). Traffic between service instances, both desired state estimates and actual state reports, influences where services are deployed, 
+        attempting to place services with significant traffic or latency requirements &ldquo;close&rdquo; to each other. Additionally, Services in the model specify placement
+        constraints, like resources required or fault domain rules, and these constraints are used to determine preferred placement of the services. 
+    </p>
+    <p>
+        The data needed to configure service&ndash;to&ndash;service access &mdash; using a traditional network approach (e.g. DNS+LB) or a Service Mesh approach (e.g. Istio)
+          &mdash; is part of the Unified Service Model. Services indicate the APIs that they expose and consume, and the secure identities they will use to access specific 
+          services. They declare the ports they will open, and who will manage local ingress and egress for the service. 
+    </p>
+
+    <h2 class="mat-h2 bb-dashboard-card-header-2">Intermediate Cluster Definition</h2>
+    <p>
+        The output of the Model Compiler is the Intermediate Cluster Definition. The Intermediate Cluster Definition defines the clusters that exist, which nodes are in
+        those clusters, which cluster to deploy each service to, guidelines for the number of instances to deploy, the node types to be used, and the configuration of 
+        gateways and proxies used in a Service Mesh. 
+    </p>
+    <p>
+        The Intermediate Cluster Definition is agnostic to whatever underlying management platform is being used by the organization. The intent is that a wide variety of
+        management platform solutions could be supported by defining a pluggable provider model for various management platforms, like Kubernetes or Istio. </p>
+
   </div>
-</section>
+</div>

@@ -3,15 +3,23 @@
 .bb-card {
   display: block;
   position: relative;
-  padding: 16px;
-  height: 200px;
+  padding: 12px;
+  height: 250px;
   background: $white;
+}
+
+.bb-header-card {
+  display: block;
+  position: relative;
+  padding: 12px;
+  height: 175px;
+  background: $grey-lighten;
 }
 
 .bb-logo-img {
   vertical-align: middle;
-  width: 400px;
-  height: 250px;
+  width: 263px;
+  height: 125px;
 }
 
 
@@ -37,6 +45,10 @@
 
 .bb-card-33 {
   width: 33%;
+}
+
+.bb-card-40 {
+  width: 40%;
 }
 
 .bb-card-50 {

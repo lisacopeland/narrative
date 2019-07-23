@@ -7,10 +7,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  bluejayImage = 'assets/icons/BlueJayBox.png';
-  jackdawImage = 'assets/icons/JackdawBox.png';
-  magpieImage = 'assets/icons/MagpieBox.png';
-  ravenImage = 'assets/icons/RavenBox.png';
+  bluejayImage = 'assets/icons/BlueJayBoxNoText.png';
+  jackdawImage = 'assets/icons/JackdawBoxNoText.png';
+  magpieImage = 'assets/icons/MagpieBoxNoText.png';
+  ravenImage = 'assets/icons/RavenBoxNoText.png';
 
   constructor(private router: Router) {
   }
