@@ -3,57 +3,25 @@
   <div fxLayout="column" fxLayoutGap="20px">
     <div fxLayout="row" fxLayoutAlign="center">
       <div class="bb-header-card bb-card-100">
-        <h1 class="title-text">Open-Source Tools for Global Service Management</h1>
+        <h1 class="header-text">Welcome to My Demo Program!</h1>
         <div fxLayout="row wrap">
-          <p class="p-text">
-          Corvidi (kor-vid-eye) is a related set of tools meant to complement Open-Source technologies like Kubernetes, Docker,
-          Envoy, Istio, and Consul. Each Corvidi-related product is meant to address an important gap in the current use of
-          container-friendly, micro-service-oriented management platforms. In particular, Corvidi attempts to provide a more 
-          holistic view of an organization's services and compute resources. Corvidi promotes efficient, reliable and secure manangement 
-          of thousands of services running on hundreds of thousands of nodes located in dozens of data centers around the world.
-          </p>
+
+          Click the plus to add a row. Click the dashboard icon to edit a row. click
+          the delete button to remove a row.
+
         </div>
       </div>
     </div>
 
     <div fxLayoutAlign="center" fxLayoutGap="80px" fxLayout.gt-sm="row" fxLayout.lt-md="column">
-      <div fxLayout="column" fxLayoutAlign="center center" class="bb-card card-test" ngClass.gt-sm="bb-card-40" ngClass.lt-md="bb-card-100">
-        <img [src]="bluejayImage" class="bb-logo-img">
-        <div>
+      <mat-card fxLayout="column" class="bb-full-width-table">
+        <app-overview></app-overview>
+<!--         <div>
           With detailed models of clusters, nodes and services, Blue Jay can plan and orchestrate deployment across services and regions, improving reliability
           while reducing the need to overprovision services.
-        </div>
-        <button mat-stroked-button routerLink="/bluejay">Learn More</button>
-      </div>
-      <div fxLayout="column" fxLayoutAlign="center center" class="bb-card card-test" ngClass.gt-sm="bb-card-40" ngClass.lt-md="bb-card-100">
-        <img [src]="jackdawImage" class="bb-logo-img">
-        <div>
-          Jackdaw extends the Blue Jay data model to provide a model-based desired-state configuration management system. Jackdaw supports workflows, approvals
-          and auditing when targeting and applying configuration changes. 
-        </div>
-        <button mat-stroked-button routerLink="/jackdaw">Learn More</button>
-      </div>
+        </div> -->
+      </mat-card>
     </div>
-    <div fxLayoutAlign="center" fxLayoutGap="80px" fxLayout.gt-sm="row" fxLayout.lt-md="column">
 
-      <div fxLayout="column" fxLayoutAlign="center center" class="bb-card card-test" ngClass.gt-sm="bb-card-40" ngClass.lt-md="bb-card-100">
-        <img [src]="magpieImage" class="bb-logo-img">
-        <div>
-          Magpie provides a relayed connection to individual service instances, allowing 
-          real-time collection of key metrics and providing a channel for targeting scripts
-          and commands at deployed instances.
-        </div>
-        <button mat-stroked-button routerLink="/magpie">Learn More</button>
-      </div>
-      <div fxLayout="column" fxLayoutAlign="center center" class="bb-card card-test" ngClass.gt-sm="bb-card-40" ngClass.lt-md="bb-card-100">
-        <img [src]="ravenImage" class="bb-logo-img">
-        <div>
-          The Raven Management Console brings together all the elements needed to manage 
-          an organization's services: desired state from Blue Jay and Jackdaw, actual state 
-          from Magpie, data from your CI/CD system, amd more.
-        </div>
-        <button mat-stroked-button routerLink="/raven">Learn More</button>
-      </div>
-    </div>
   </div>
 </section>

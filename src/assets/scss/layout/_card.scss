@@ -12,7 +12,7 @@
   display: block;
   position: relative;
   padding: 12px;
-  height: 175px;
+  height: 100px;
   background: $grey-lighten;
 }
 
@@ -22,9 +22,12 @@
   height: 125px;
 }
 
+.bb-full-width-table {
+  width: 100%
+}
 
 .bb-list-card {
-  height: 375px;
+  height: 100%;
 }
 
 .bb-log-card {

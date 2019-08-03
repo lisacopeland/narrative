@@ -4,6 +4,7 @@ import { MaterialModule } from '../material/material.module';
 import { HomeComponent } from './home.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HomeRoutingModule } from './home-routing.module';
+import { OverviewModule } from '../overview/overview.module';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -11,7 +12,8 @@ import { HomeRoutingModule } from './home-routing.module';
     CommonModule,
     HomeRoutingModule,
     FlexLayoutModule,
-    MaterialModule
+    MaterialModule,
+    OverviewModule
   ], exports: [
     HomeComponent
   ]

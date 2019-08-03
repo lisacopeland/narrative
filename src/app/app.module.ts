@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material/material.module';
+import { EditDialogComponent } from './edit-dialog/edit-dialog.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EditDialogComponent
   ],
   imports: [
     BrowserModule,
