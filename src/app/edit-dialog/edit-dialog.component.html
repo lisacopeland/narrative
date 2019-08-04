@@ -1,1 +1,17 @@
-<p>edit-dialog works!</p>
+<div mat-dialog-title fxLayout="row" fxLayoutAlign="space-between center">
+  <h1 class="mat-h1">{{ editTitle }}</h1>
+  <button mat-icon-button matTooltip="Return to overview" matTooltipShowDelay="1000" (click)="onCancel()" color="primary">
+    <mat-icon color="primary">cancel</mat-icon>
+  </button>
+</div>
+
+<form novalidate [formGroup]="orderForm" (ngSubmit)="onSubmit()" fxLayout="column">
+
+  <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+    <button mat-button color="accent" type="button" (click)="onCancel()">Cancel
+    </button>
+    <button mat-raised-button class="save-button" color="primary" type="submit">
+      Save
+    </button>
+  </div>
+</form>

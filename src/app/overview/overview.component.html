@@ -1,1 +1,85 @@
-<p>overview works!</p>
+<mat-toolbar fxLayout="row" fxLayoutAlign="space-between center">
+  <h1 class="mat-h1">Buy Orders</h1>
+  <button
+    mat-icon-button
+    matTooltip="Add A Buy Order"
+    matTooltipShowDelay="1000"
+    (click)="onAdd()">
+    <mat-icon color="primary">add_circle</mat-icon>
+  </button>
+</mat-toolbar>
+
+<div *ngIf="noData">
+  There are no buy orders yet.
+  <button mat-raised-button color="primary" matTooltip="Add A Buy Order" matTooltipShowDelay="1000"
+    (click)="onAdd()">Add Buy Order
+  </button>
+</div>
+
+    <table *ngIf="!noData" mat-table class="full-width-table" [dataSource]="dataSource" matSort aria-label="Elements">
+
+      <!-- Client Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+        <td mat-cell *matCellDef="let row">
+          {{ row?.name }}
+        </td>
+      </ng-container>
+
+      <!-- Description Column -->
+      <ng-container matColumnDef="maxBidPrice">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Maximum Bid Price</th>
+        <td mat-cell *matCellDef="let row">
+          {{ row?.max_bid_price | currency }}
+        </td>
+      </ng-container>
+
+      <!-- Description Column -->
+      <ng-container matColumnDef="dataPackageType">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Data Package Type</th>
+        <td mat-cell *matCellDef="let row">
+          {{ row?.data_package_type }}
+        </td>
+      </ng-container>
+
+      <!-- Actions Column -->
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header></th>
+        <td mat-cell *matCellDef="let row">
+          <button mat-icon-button matTooltip="Edit {{row?.name}}"
+            (click)="onEdit(row)"
+            matTooltipShowDelay="1000"
+            matTooltipPosition="right">
+            <mat-icon color="primary">dashboard</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <!-- Delete Column -->
+      <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let row">
+          <button
+            mat-icon-button
+            matTooltip="Delete {{row?.name}}"
+            (click)="onDelete(row)"
+            matTooltipShowDelay="1000"
+            matTooltipPosition="right">
+            <mat-icon color="primary">delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+      </tr>
+    </table>
+
+    <mat-paginator
+      [hidden]="!noData"
+      #paginator
+      [length]="dataSource.data.length"
+      [pageIndex]="0"
+      [pageSize]="10"
+      [pageSizeOptions]="[10,25,50]">
+    </mat-paginator>

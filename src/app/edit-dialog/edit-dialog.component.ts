@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { BuyOrderInterfaceWithId, BuyOrderInterface } from '../shared/interfaces/buy-order.interface';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-edit-dialog',
@@ -7,9 +11,56 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditDialogComponent implements OnInit {
 
-  constructor() { }
+  editTitle = 'Edit a buy order';
+  editMode = true;
+  buyOrder: BuyOrderInterfaceWithId;
+  orderForm: FormGroup;
+  constructor(private snackBar: MatSnackBar,
+              private dialogRef: MatDialogRef<EditDialogComponent>,
+              @Inject(MAT_DIALOG_DATA) public data: BuyOrderInterfaceWithId) { }
 
   ngOnInit() {
+    this.initForm();
+    if (this.data) {
+      this.editMode = true;
+      this.buyOrder = this.data;
+      this.patchForm();
+    }
+  }
+
+  initForm() {
+    this.orderForm = new FormGroup({
+      name: new FormControl('', Validators.required),
+      maxBidPrice: new FormControl(0, Validators.required),
+      dataPackageType: new FormControl('Device Location', Validators.required)
+    });
+  }
+
+  patchForm() {
+    this.orderForm.patchValue({
+      name: this.buyOrder.name,
+      maxBidPrice: this.buyOrder.max_bid_price,
+      dataPackageType: this.buyOrder.data_package_type
+    });
+  }
+
+  onCancel() {
+    this.dialogRef.close();
+  }
+
+  onSubmit() {
+    if (this.orderForm.invalid) {
+      this.snackBar.open('Please fill required fields', 'Error', {
+        duration: 5000
+      });
+    } else {
+      const newBuyOrder: BuyOrderInterface = {
+        name: this.orderForm.value.name,
+        max_bid_price: this.orderForm.value.maxBidPrice,
+        data_package_type: this.orderForm.value.dataPackageType
+      };
+      this.dialogRef.close(newBuyOrder);
+    }
   }
 
 }
