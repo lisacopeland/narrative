@@ -12,9 +12,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Ensure that the sql server is running on localhost:3002
-(See the server repo for instruction on how to do this)
+- Ensure that the sql server is running on localhost:3002 (See the server repo for instruction on how to do this)
 
-Note: You will need to enable a CORS extension on your chrome browser.
-Run `ng serve` for a dev server. 
-Navigate to `http://localhost:4200/`
+- Note: You will need to enable a CORS extension on your chrome browser.
+- Run `ng serve` for a dev server. 
+- Navigate to `http://localhost:4200/`
