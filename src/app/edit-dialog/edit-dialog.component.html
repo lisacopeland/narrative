@@ -24,10 +24,11 @@
   <!-- Max Bid Price -->
   <mat-form-field class="input-100-field">
     <mat-label>Maximum Bid Price</mat-label>
+    <span matPrefix>$</span>
     <input
       type="number"
       matInput
-      placeholder="Max Bid Price"
+      placeholder="0.00"
       formControlName="maxBidPrice"
       required>
     <mat-error *ngIf="orderForm.get('maxBidPrice').hasError('required')">This field is required</mat-error>

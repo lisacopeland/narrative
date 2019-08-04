@@ -8,6 +8,7 @@ import { EditDialogComponent } from '../edit-dialog/edit-dialog.component';
 import { AlertDialogComponent } from '../shared/dialogs/alert-dialog/alert-dialog.component';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
+import { switchMap, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-overview',
@@ -30,37 +31,52 @@ export class OverviewComponent implements OnInit {
   }
 
   getData() {
+    // First call initialize to ensure that the table exists
+    this.buyOrderService.intialize()
+      .pipe(
+        switchMap(initData => {
+          return this.buyOrderService.getBuyOrders()
+            .pipe(
+              map(list => {
+                console.log('list: ' + JSON.stringify(list));
+                const data = list as BuyOrderInterfaceWithId[];
+                if (data && data.length !== 0) {
+                  this.noData = false;
+                  this.dataSource = new MatTableDataSource(data);
+                  console.log('data source ' + this.dataSource);
+                  setTimeout(() => {
+                    this.dataSource.paginator = this.paginator;
+                    this.dataSource.sort = this.sort;
+                  }, 200);
+                } else {
+                  this.noData = true;
+                }
+              })
+            );
+        }))
+      .subscribe(() => {
+        this.subscribeToData();
+        }, error => {
+          console.log('error' + error);
+        });
 
-    // Do the initial get
-    this.buyOrderService.getBuyOrders()
-      .subscribe(list => {
-        const data = list as BuyOrderInterfaceWithId[];
-        if (list && list.length !== 0) {
+  }
+
+  subscribeToData() {
+    // Now subscribe to the observable
+    this.buyOrderService.buyOrdersChanged
+      .subscribe(buyOrders => {
+        const data = buyOrders as BuyOrderInterfaceWithId[];
+        if (data && data.length !== 0) {
           this.noData = false;
           this.dataSource = new MatTableDataSource(data);
           setTimeout(() => {
             this.dataSource.paginator = this.paginator;
             this.dataSource.sort = this.sort;
           }, 200);
+        } else {
+          this.noData = true;
         }
-      },
-      error => {
-        console.log('error' + error);
-      });
-
-    // Now subscribe to the observable
-    this.buyOrderService.buyOrdersChanged
-      .subscribe(buyOrders => {
-        console.log('data changed!');
-        const data = buyOrders as BuyOrderInterfaceWithId[];
-        if (buyOrders && buyOrders.length !== 0) {
-          this.dataSource = new MatTableDataSource(data);
-          setTimeout(() => {
-            this.dataSource.paginator = this.paginator;
-            this.dataSource.sort = this.sort;
-          }, 200);
-        }
-
       });
   }
 
@@ -72,7 +88,7 @@ export class OverviewComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
         this.buyOrderService.addBuyOrder(result)
-          .subscribe(data => {
+          .subscribe(() => {
             this.noData = false;
             this.snackBar
               .open('', 'Success', {
@@ -92,10 +108,10 @@ export class OverviewComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
+      console.log('result is ' + JSON.stringify(result));
       if (result) {
-        this.buyOrderService.addBuyOrder(result)
-          .subscribe(data => {
-            this.noData = false;
+        this.buyOrderService.updateBuyOrder(result)
+          .subscribe(() => {
             this.snackBar
               .open('', 'Success', {
                 duration: 3000
@@ -119,9 +135,10 @@ export class OverviewComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe(result => {
       if (result === 'yes') {
-        console.log('User wants to delete');
+        console.log('User wants to delete ' + row.id);
         this.buyOrderService.deleteBuyOrder(row.id)
           .subscribe(() => {
+            this.buyOrderService.sendCurrentData();
             }, error => {
                 console.error(error);
             });

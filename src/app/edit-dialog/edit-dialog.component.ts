@@ -3,6 +3,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { BuyOrderInterfaceWithId, BuyOrderInterface } from '../shared/interfaces/buy-order.interface';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { HttpClientJsonpModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-edit-dialog',
@@ -28,6 +29,7 @@ export class EditDialogComponent implements OnInit {
       this.patchForm();
     } else {
       this.editTitle = 'Add New Buy Order';
+      this.editMode = false;
     }
   }
 
@@ -52,17 +54,24 @@ export class EditDialogComponent implements OnInit {
   }
 
   onSubmit() {
-    if (this.orderForm.invalid) {
-      this.snackBar.open('Please fill in required fields', 'Error', {
-        duration: 5000
-      });
-    } else {
+    if (this.orderForm.valid) {
       const newBuyOrder: BuyOrderInterface = {
         name: this.orderForm.value.name,
         max_bid_price: this.orderForm.value.maxBidPrice,
         data_package_type: this.orderForm.value.dataPackageType
       };
-      this.dialogRef.close(newBuyOrder);
+      if (!this.editMode) {
+        this.dialogRef.close(newBuyOrder);
+      } else {
+        const id = this.buyOrder.id;
+        const newBuyOrderWithId = { id, ...newBuyOrder} as  BuyOrderInterfaceWithId;
+        console.log('closing dialog with ' + JSON.stringify(newBuyOrderWithId));
+        this.dialogRef.close(newBuyOrderWithId);
+      }
+    } else {
+      this.snackBar.open('Please fill in required fields', 'Error', {
+        duration: 5000
+      });
     }
   }
 

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { map, catchError } from 'rxjs/operators';
+import { HttpClient, HttpHeaders, HttpClientJsonpModule } from '@angular/common/http';
+import { map, catchError, tap } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
 import { BuyOrderInterfaceWithId, BuyOrderInterface } from '../interfaces/buy-order.interface';
 import { of, Observable, BehaviorSubject } from 'rxjs';
@@ -19,6 +19,30 @@ export class BuyorderService {
 
   constructor(private httpClient: HttpClient) { }
 
+  intialize() {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+
+    return this.httpClient
+      .get(environment.databaseUrl + '/initialize', httpOptions)
+      .pipe(
+        map(res => {
+          return res;
+        }),
+        catchError(err => {
+          return of(`I caught: ${err}`);
+        })
+      );
+
+  }
+
+  sendCurrentData() {
+    this.buyOrderSource.next(this.buyOrders.slice());
+  }
+
   // GET Call to get all data
   getBuyOrders(): Observable<BuyOrderInterfaceWithId[] | string> {
     const httpOptions = {
@@ -32,6 +56,7 @@ export class BuyorderService {
     .pipe(
       map(res => {
         this.buyOrders = res;
+        console.log('buyorders from get : ' + JSON.stringify(this.buyOrders));
         this.buyOrderSource.next(this.buyOrders.slice());
         return res;
       }),
@@ -99,13 +124,13 @@ export class BuyorderService {
     };
 
     return this.httpClient
-      .put<BuyOrderInterfaceWithId>(environment.databaseUrl + '/buyorder/' + buyOrder.id, buyOrder, httpOptions)
+      .put(environment.databaseUrl + '/buyorder/' + buyOrder.id, buyOrder, httpOptions)
       .pipe(
-        map(res => {
+        map(() => {
           const idx = this.buyOrders.findIndex(x => x.id === buyOrder.id);
           this.buyOrders[idx] = buyOrder;
           this.buyOrderSource.next(this.buyOrders.slice());
-          return res;
+          return 'success';
         }),
         catchError(err => {
           return of(`I caught: ${err}`);
@@ -121,14 +146,15 @@ export class BuyorderService {
       })
     };
 
+    console.log('going to delete id: ' + id);
     return this.httpClient
-      .delete<BuyOrderInterfaceWithId[]>(environment.databaseUrl + '/buyorder/' + id, httpOptions)
+      .delete(environment.databaseUrl + '/buyorder/' + id, httpOptions)
       .pipe(
-        map(res => {
+        map(() => {
           const idx = this.buyOrders.findIndex(x => x.id === id);
-          this.buyOrders.slice(idx, 1);
+          this.buyOrders.splice(idx, 1);
           this.buyOrderSource.next(this.buyOrders.slice());
-          return res;
+          return 'success';
         }),
         catchError(err => {
           return of(`I caught: ${err}`);

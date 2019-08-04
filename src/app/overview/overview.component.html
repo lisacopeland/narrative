@@ -31,7 +31,7 @@
 
   <!-- Max Bid Price Column -->
   <ng-container matColumnDef="maxBidPrice">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header>Maximum Bid Price</th>
+    <th mat-header-cell *matHeaderCellDef>Maximum Bid Price</th>
     <td mat-cell *matCellDef="let row">
       {{ row?.max_bid_price | currency }}
     </td>
@@ -39,7 +39,7 @@
 
   <!-- Data Package Type -->
   <ng-container matColumnDef="dataPackageType">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header>Data Package Type</th>
+    <th mat-header-cell *matHeaderCellDef>Data Package Type</th>
     <td mat-cell *matCellDef="let row">
       {{ row?.data_package_type }}
     </td>
