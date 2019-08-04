@@ -55,6 +55,10 @@ export class OverviewComponent implements OnInit {
         const data = buyOrders as BuyOrderInterfaceWithId[];
         if (buyOrders && buyOrders.length !== 0) {
           this.dataSource = new MatTableDataSource(data);
+          setTimeout(() => {
+            this.dataSource.paginator = this.paginator;
+            this.dataSource.sort = this.sort;
+          }, 200);
         }
 
       });

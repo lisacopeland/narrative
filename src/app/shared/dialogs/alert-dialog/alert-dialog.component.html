@@ -1,3 +1,4 @@
+<!-- Generic Confirmation Dialog Header with cancel button -->
 <div mat-dialog-title fxLayout="row" fxLayoutAlign="space-between center">
   <h1 class="mat-h1">{{ headerText }}</h1>
   <button
@@ -9,7 +10,11 @@
     <mat-icon color="primary">cancel</mat-icon>
   </button>
 </div>
+
+<!-- Message to user -->
 <p>{{ alertData?.message }}</p>
+
+<!-- Action buttons -->
 <div mat-dialog-actions fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
   <button
     *ngFor="let dialogButton of dialogButtons"

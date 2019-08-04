@@ -26,6 +26,8 @@ export class EditDialogComponent implements OnInit {
       this.editMode = true;
       this.buyOrder = this.data;
       this.patchForm();
+    } else {
+      this.editTitle = 'Add New Buy Order';
     }
   }
 
@@ -51,7 +53,7 @@ export class EditDialogComponent implements OnInit {
 
   onSubmit() {
     if (this.orderForm.invalid) {
-      this.snackBar.open('Please fill required fields', 'Error', {
+      this.snackBar.open('Please fill in required fields', 'Error', {
         duration: 5000
       });
     } else {

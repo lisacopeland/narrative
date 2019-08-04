@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,21 +6,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  bluejayImage = 'assets/icons/BlueJayBoxNoText.png';
-  jackdawImage = 'assets/icons/JackdawBoxNoText.png';
-  magpieImage = 'assets/icons/MagpieBoxNoText.png';
-  ravenImage = 'assets/icons/RavenBoxNoText.png';
 
-  constructor(private router: Router) {
+  constructor() {
   }
 
   ngOnInit() {
-    console.log('hi from the home component');
-  }
-
-  onBluejay() {
-    console.log('going to bluejay');
-    this.router.navigateByUrl('bluejay');
   }
 
 }

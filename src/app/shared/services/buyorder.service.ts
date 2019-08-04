@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpErrorResponse, HttpParams } from '@angular/common/http';
-import { map, switchMap, catchError } from 'rxjs/operators';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { map, catchError } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
 import { BuyOrderInterfaceWithId, BuyOrderInterface } from '../interfaces/buy-order.interface';
 import { of, Observable, BehaviorSubject } from 'rxjs';
-import { stringToKeyValue } from '@angular/flex-layout/extended/typings/style/style-transforms';
 
+// Service for persisting and getting data from the database
+// Service maintains a private store and alerts consumers to
+// changes with an observable
 @Injectable({
   providedIn: 'root'
 })
@@ -14,8 +16,10 @@ export class BuyorderService {
   private buyOrders: BuyOrderInterfaceWithId[];
   private buyOrderSource = new BehaviorSubject<BuyOrderInterfaceWithId[]>([]);
   buyOrdersChanged = this.buyOrderSource.asObservable();
+
   constructor(private httpClient: HttpClient) { }
 
+  // GET Call to get all data
   getBuyOrders(): Observable<BuyOrderInterfaceWithId[] | string> {
     const httpOptions = {
       headers: new HttpHeaders({
@@ -37,6 +41,7 @@ export class BuyorderService {
     );
   }
 
+  // Get a single record by id
   getBuyOrder(id: string) {
     const httpOptions = {
       headers: new HttpHeaders({
@@ -56,6 +61,7 @@ export class BuyorderService {
       );
   }
 
+  // Perform a 'POST' request with a record
   addBuyOrder(buyOrder: BuyOrderInterface) {
     const httpOptions = {
       headers: new HttpHeaders({
@@ -84,6 +90,7 @@ export class BuyorderService {
       );
   }
 
+  // Update an existing record with a 'PUT'
   updateBuyOrder(buyOrder: BuyOrderInterfaceWithId) {
     const httpOptions = {
       headers: new HttpHeaders({
@@ -106,7 +113,7 @@ export class BuyorderService {
       );
   }
 
-
+  // Delete single record by id
   deleteBuyOrder(id: string) {
     const httpOptions = {
       headers: new HttpHeaders({
@@ -114,7 +121,6 @@ export class BuyorderService {
       })
     };
 
-    console.log('going to delete id ' + id);
     return this.httpClient
       .delete<BuyOrderInterfaceWithId[]>(environment.databaseUrl + '/buyorder/' + id, httpOptions)
       .pipe(

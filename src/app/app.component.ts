@@ -7,7 +7,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'blackbird';
   opened = false;
   headerImage = 'assets/icons/RavenFlyingWhiteSquare.png';
 
@@ -15,7 +14,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('hi from the app component');
     this.router.navigateByUrl('/home');
   }
 }

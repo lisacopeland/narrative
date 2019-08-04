@@ -1,25 +1,22 @@
+<!-- Home Component -->
 <section class="bb-overview-container">
-
   <div fxLayout="column" fxLayoutGap="20px">
+
+    <!-- Top of page -->
     <div fxLayout="row" fxLayoutAlign="center">
       <div class="bb-header-card bb-card-100">
         <h1 class="header-text">Welcome to My Demo Program!</h1>
         <div fxLayout="row wrap">
-
           Click the plus to add a row. Click the dashboard icon to edit a row. click
           the delete button to remove a row.
-
         </div>
       </div>
     </div>
 
+    <!-- Display Overview Component -->
     <div fxLayoutAlign="center" fxLayoutGap="80px" fxLayout.gt-sm="row" fxLayout.lt-md="column">
       <mat-card fxLayout="column" class="bb-full-width-table">
         <app-overview></app-overview>
-<!--         <div>
-          With detailed models of clusters, nodes and services, Blue Jay can plan and orchestrate deployment across services and regions, improving reliability
-          while reducing the need to overprovision services.
-        </div> -->
       </mat-card>
     </div>
 

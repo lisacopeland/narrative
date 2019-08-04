@@ -27,20 +27,20 @@ $custom-typography: mat-typography-config(
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue.
-$service-kicker-primary: mat-palette($mat-skbluepalette);
-$service-kicker-accent:  mat-palette($mat-skyellowpalette);
+$blackbird-primary: mat-palette($mat-skbluepalette);
+$blackbird-accent:  mat-palette($mat-skyellowpalette);
 
 // The warn palette is optional (defaults to red).
-$service-kicker-warn:    mat-palette($mat-red);
+$blackbird-warn:    mat-palette($mat-red);
 
 
 // Create the theme object (a Sass map containing all of the palettes).
-$service-kicker-theme: mat-light-theme($service-kicker-primary, $service-kicker-accent, $service-kicker-warn);
+$blackbird-theme: mat-light-theme($blackbird-primary, $blackbird-accent, $blackbird-warn);
 
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($service-kicker-theme);
+@include angular-material-theme($blackbird-theme);
 
 
