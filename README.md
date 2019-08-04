@@ -4,11 +4,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Steps to install
 
-Ensure that you have Node.js 10.9.0 or later installed
-Ensure that you have installed the angular cli version 8.1.1 
+#Ensure that you have Node.js 10.9.0 or later installed
+#Ensure that you have installed the angular cli version 8.1.1 
    npm install -g @angular/cli
-Clone the repo to a local directory
-Cd into the directory and run npm install
+# Clone the repo to a local directory
+# Cd into the directory and run npm install
 
 ## Development server
 
