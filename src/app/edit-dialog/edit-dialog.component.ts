@@ -15,6 +15,7 @@ export class EditDialogComponent implements OnInit {
   editMode = true;
   buyOrder: BuyOrderInterfaceWithId;
   orderForm: FormGroup;
+  typeOptions = ['Device Location', 'Device Behavior', 'ID Mapping'];
   constructor(private snackBar: MatSnackBar,
               private dialogRef: MatDialogRef<EditDialogComponent>,
               @Inject(MAT_DIALOG_DATA) public data: BuyOrderInterfaceWithId) { }

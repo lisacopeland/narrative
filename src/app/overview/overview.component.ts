@@ -36,6 +36,7 @@ export class OverviewComponent implements OnInit {
       .subscribe(list => {
         const data = list as BuyOrderInterfaceWithId[];
         if (list && list.length !== 0) {
+          this.noData = false;
           this.dataSource = new MatTableDataSource(data);
           setTimeout(() => {
             this.dataSource.paginator = this.paginator;
@@ -50,6 +51,7 @@ export class OverviewComponent implements OnInit {
     // Now subscribe to the observable
     this.buyOrderService.buyOrdersChanged
       .subscribe(buyOrders => {
+        console.log('data changed!');
         const data = buyOrders as BuyOrderInterfaceWithId[];
         if (buyOrders && buyOrders.length !== 0) {
           this.dataSource = new MatTableDataSource(data);
@@ -60,6 +62,7 @@ export class OverviewComponent implements OnInit {
 
   onAdd() {
     const dialogRef = this.dialog.open(EditDialogComponent, {
+      panelClass: 'edit-dialog',
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -80,7 +83,8 @@ export class OverviewComponent implements OnInit {
 
   onEdit(row: BuyOrderInterfaceWithId) {
     const dialogRef = this.dialog.open(EditDialogComponent, {
-      data: row
+      data: row,
+      panelClass: 'edit-dialog'
     });
 
     dialogRef.afterClosed().subscribe(result => {

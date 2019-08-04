@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpErrorResponse, HttpParams } from '@angular/common/http';
 import { map, switchMap, catchError } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
 import { BuyOrderInterfaceWithId, BuyOrderInterface } from '../interfaces/buy-order.interface';
@@ -114,6 +114,7 @@ export class BuyorderService {
       })
     };
 
+    console.log('going to delete id ' + id);
     return this.httpClient
       .delete<BuyOrderInterfaceWithId[]>(environment.databaseUrl + '/buyorder/' + id, httpOptions)
       .pipe(
